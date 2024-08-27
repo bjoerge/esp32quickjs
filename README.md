@@ -15,22 +15,19 @@ add git url to `lib_deps`.
 
 ```ini
 lib_deps = 
-	https://github.com/binzume/esp32quickjs.git
+	https://github.com/bjoerge/esp32quickjs.git
 ```
 
 ### main.cpp
-
-include `esp/QuickJS.h`.
-
 ```c++
 #include <Arduino.h>
-#include "esp/QuickJS.h"
+#include "esp32/QuickJS.h"
 
 static const char *jscode = R"CODE(
   console.log('Hello, JavaScript!');
 )CODE";
 
-M5QuickJS qjs;
+ESP32QuickJS qjs;
 
 void setup() {
   Serial.begin(115200);
