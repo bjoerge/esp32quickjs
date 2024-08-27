@@ -318,31 +318,31 @@ class ESP32QuickJS {
 
     static const JSCFunctionListEntry esp32_funcs[] = {
         JSCFunctionListEntry{"millis", 0, JS_DEF_CFUNC, 0, {
-                               func : {0, JS_CFUNC_generic, esp32_millis}
+                                {0, JS_CFUNC_generic, esp32_millis}
                              }},
         JSCFunctionListEntry{"pinMode", 0, JS_DEF_CFUNC, 0, {
-                               func : {2, JS_CFUNC_generic, esp32_gpio_mode}
+                                {2, JS_CFUNC_generic, esp32_gpio_mode}
                              }},
         JSCFunctionListEntry{
             "digitalRead", 0, JS_DEF_CFUNC, 0, {
-              func : {1, JS_CFUNC_generic, esp32_gpio_digital_read}
+              {1, JS_CFUNC_generic, esp32_gpio_digital_read}
             }},
         JSCFunctionListEntry{
             "digitalWrite", 0, JS_DEF_CFUNC, 0, {
-              func : {2, JS_CFUNC_generic, esp32_gpio_digital_write}
+              {2, JS_CFUNC_generic, esp32_gpio_digital_write}
             }},
         JSCFunctionListEntry{"deepSleep", 0, JS_DEF_CFUNC, 0, {
-                               func : {1, JS_CFUNC_generic, esp32_deep_sleep}
+                                {1, JS_CFUNC_generic, esp32_deep_sleep}
                              }},
         JSCFunctionListEntry{"setLoop", 0, JS_DEF_CFUNC, 0, {
-                               func : {1, JS_CFUNC_generic, esp32_set_loop}
+                               {1, JS_CFUNC_generic, esp32_set_loop}
                              }},
 #ifdef ENABLE_WIFI
         JSCFunctionListEntry{"isWifiConnected", 0, JS_DEF_CFUNC, 0, {
-                               func : {0, JS_CFUNC_generic, wifi_is_connected}
+                               {0, JS_CFUNC_generic, wifi_is_connected}
                              }},
         JSCFunctionListEntry{"fetch", 0, JS_DEF_CFUNC, 0, {
-                               func : {2, JS_CFUNC_generic, http_fetch}
+                               {2, JS_CFUNC_generic, http_fetch}
                              }},
 #endif
     };
